@@ -1,0 +1,48 @@
+:host {
+  width: 100%;
+  form {
+    min-width: 150px;
+    width: 100%;
+    margin-top: 32px;
+
+    label {
+      font-size: 12px;
+      line-height: 14px;
+      color: #484848;
+    }
+  }
+
+  .form-field {
+    width: 100%;
+    margin-top: 8px;
+
+    input {
+      font-size: 14px;
+    }
+  }
+}
+
+.company-container {
+  display: flex;
+  gap: 14px;
+  padding: 8px 0;
+
+  &__logo {
+    width: 54px;
+    object-fit: contain;
+  }
+
+  &__typography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__name {
+  }
+
+  &__link {
+    font-size: 12px;
+    color: #9f9f9f;
+  }
+}

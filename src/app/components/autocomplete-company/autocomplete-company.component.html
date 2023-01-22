@@ -1,0 +1,28 @@
+<form>
+  <label for="company">Компания</label>
+  <mat-form-field class="form-field" appearance="fill">
+    <input
+      id="company"
+      type="text"
+      placeholder="Начните вводить название компании"
+      matInput
+      [formControl]="inputControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let company of companies | async" [value]="company">
+        <div class="company-container">
+          <img
+            class="company-container__logo"
+            [src]="company.logo"
+            [alt]="company.name"
+          />
+          <div class="company-container__typography">
+            <span class="company-container__name">{{ company.name }}</span>
+            <span class="company-container__link">{{ company.domain }}</span>
+          </div>
+        </div>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

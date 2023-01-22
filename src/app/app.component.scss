@@ -1,0 +1,8 @@
+:host {
+    .layout {
+        width: min(100% - 15px, 400px);
+        margin-inline: auto;
+        height: 100vh;
+        display: flex;
+    }
+}

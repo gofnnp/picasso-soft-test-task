@@ -14,7 +14,7 @@
         <div class="company-container">
           <img
             class="company-container__logo"
-            [src]="company.logo"
+            [src]="company.logo.length ? company.logo : './assets/no-image.png'"
             [alt]="company.name"
           />
           <div class="company-container__typography">

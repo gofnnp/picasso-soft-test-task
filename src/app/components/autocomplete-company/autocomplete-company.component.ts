@@ -31,6 +31,12 @@ export class AutocompleteCompanyComponent implements OnInit {
         if (!input) return '';
         return typeof input === 'string' ? input : input['name'];
       }),
+      map((input) => {
+        input = input.replace('https://', '')
+        input = input.replace('http://', '')
+        input = input.replace('www.', '')
+        return input
+      }),
       filter((input) => !!input && input.trim().length > 1),
       distinctUntilChanged(),
       switchMap((input) => this.autocomplete.getCompanies(input ?? ''))
